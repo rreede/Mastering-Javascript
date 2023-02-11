@@ -77,7 +77,7 @@ log(x, y);
 
 constAverageAge = (ageJonas + ageSarah) / 2;
 console.log(ageJonas, ageSarah, constAverageAge);
-*/
+
 
 const MarkHeight = 1.69;
 const MarkWeight = 78;
@@ -90,3 +90,26 @@ const JohnBMI = JohnWeight / JohnHeight ** 2;
 
 const markHigherBMI = MarkBMI > JohnBMI;
 console.log(markHigherBMI);
+*/
+
+const firstName = "Rene";
+
+const job = "teacher";
+
+const birthYear = 1996;
+const year = 2037;
+
+const rene =
+  "I'm " + firstName + ", a " + (year - birthYear) + " year old " + job + "!";
+
+console.log(rene);
+
+// Template literal (ES6)
+
+const reneNew = `I'm ${firstName}, a ${year - birthYear} year old ${job}`;
+
+console.log(reneNew);
+
+console.log(`ordinary backticks no + needed`);
+
+console.log(`String with \n\ multiple \n\ lines`);
