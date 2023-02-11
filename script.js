@@ -78,7 +78,7 @@ log(x, y);
 constAverageAge = (ageJonas + ageSarah) / 2;
 console.log(ageJonas, ageSarah, constAverageAge);
 
-
+*/
 const MarkHeight = 1.69;
 const MarkWeight = 78;
 
@@ -90,7 +90,14 @@ const JohnBMI = JohnWeight / JohnHeight ** 2;
 
 const markHigherBMI = MarkBMI > JohnBMI;
 console.log(markHigherBMI);
-*/
+
+if (MarkBMI > JohnBMI) {
+  console.log(`Mark's BMI ${MarkBMI} is higher than John's ${JohnBMI}`);
+} else {
+  console.log("John's BMI ${JohnBMI} is higher than Mark's ${MarkBMI}");
+}
+
+/*
 
 const firstName = "Rene";
 
@@ -113,3 +120,25 @@ console.log(reneNew);
 console.log(`ordinary backticks no + needed`);
 
 console.log(`String with \n\ multiple \n\ lines`);
+
+
+
+const age = 5;
+
+if (age >= 18) {
+  console.log("Sarah can start driving license 💖");
+} else {
+  const yearsLeft = 18 - age;
+  console.log(`Sarah is too young, wait another ${yearsLeft} years `);
+}
+
+const birthYear = 2012;
+let century;
+if (birthYear <= 2000) {
+  century = 20;
+} else {
+  century = 21;
+}
+
+console.log(`You are born in ${century} century`);
+*/
