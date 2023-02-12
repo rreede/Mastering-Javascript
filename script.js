@@ -78,7 +78,7 @@ log(x, y);
 constAverageAge = (ageJonas + ageSarah) / 2;
 console.log(ageJonas, ageSarah, constAverageAge);
 
-*/
+
 const MarkHeight = 1.69;
 const MarkWeight = 78;
 
@@ -141,7 +141,6 @@ if (birthYear <= 2000) {
 }
 
 console.log(`You are born in ${century} century`);
-*/
 
 // Type conversion and Coersion (Number/String/Boolean)
 
@@ -158,3 +157,32 @@ let n = "1" + 1;
 n = n - 1;
 
 console.log(n);
+
+*/
+
+// Falsy and Truthy values
+
+// 5 Falsy values 0 , "", undefined, null, NaN
+
+// Truthy Value
+
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean("Jonas"));
+console.log(Boolean({}));
+
+const money = 100;
+
+if (money) {
+  console.log("Don't spend it all");
+} else {
+  console.log("You should get a job");
+}
+
+let height = 192;
+
+if (height) {
+  console.log("Height is defined");
+} else {
+  console.log("Height is undefined");
+}
