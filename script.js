@@ -142,3 +142,19 @@ if (birthYear <= 2000) {
 
 console.log(`You are born in ${century} century`);
 */
+
+// Type conversion and Coersion (Number/String/Boolean)
+
+const inputYear = "1991";
+console.log(Number(inputYear));
+
+console.log(Number("Jonas"));
+
+console.log(String(23), 23);
+console.log("23" - "10" - "3"); // Strings are converted to numbers with -
+console.log("23" + "10" + "3"); // Will concatinate
+
+let n = "1" + 1;
+n = n - 1;
+
+console.log(n);
