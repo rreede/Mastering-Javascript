@@ -158,7 +158,7 @@ n = n - 1;
 
 console.log(n);
 
-*/
+
 
 // Falsy and Truthy values
 
@@ -186,3 +186,30 @@ if (height) {
 } else {
   console.log("Height is undefined");
 }
+
+// == vs ===
+
+const age = "18";
+
+// Strict equality is best for boolean
+if (age === 18) console.log("You just became an adult, strict"); // Strict equality (No Type coercion)
+
+if (age == 18) console.log("You just became an adult, loose"); // Strict equality (No Type coercion)
+
+const favouriteNumber = Number(prompt("What is you favourite number?"));
+
+console.log(favouriteNumber);
+
+if (favouriteNumber === 23) {
+  console.log("23 is an amazing number");
+} else if (favouriteNumber === 7) {
+  console.log("7 Too");
+} else {
+  console.log("None of the numbers are neither 23 nor 7");
+}
+
+if (favouriteNumber !== 23) {
+  console.log("Why not 23?");
+}
+
+*/
