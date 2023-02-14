@@ -51,7 +51,6 @@ if (population > 33) {
     `${country}'s population is ${belowAverage} million below average`
   );
 }
-*/
 
 const numNeighbours = Number(
   prompt("How many neighbour countries does your country have?")
@@ -64,3 +63,44 @@ if (numNeighbours === 1) {
 } else {
   console.log("No borders");
 }
+
+/*
+
+
+
+// Logical Operators
+
+const hasDriversLicense = true; // A
+const hasGoodVision = true; // B
+
+console.log(hasDriversLicense && hasGoodVision); // and
+console.log(hasDriversLicense || hasGoodVision); // or
+console.log(!hasDriversLicense); // or
+
+const shouldDrive = hasDriversLicense && hasGoodVision;
+
+if (shouldDrive) {
+  console.log("Sara is able to drive!");
+} else {
+  console.log("Someone else should drive!");
+}
+
+const isTired = false; // C
+console.log(hasDriversLicense && hasGoodVision && isTired);
+
+if (hasDriversLicense && hasGoodVision && !isTired) {
+  console.log("Sara is able to drive!");
+} else {
+  console.log("Someone else should drive!");
+}
+
+
+
+const sarahNewCountry = true;
+
+if (country === "english" && population < 50 && !isIsland === false) {
+  console.log("You should live in Estonia!");
+} else {
+  console.log("You should not live in Estonia!");
+}
+*/

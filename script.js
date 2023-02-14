@@ -213,3 +213,26 @@ if (favouriteNumber !== 23) {
 }
 
 */
+
+const dolphins1 = 97;
+const dolphins2 = 112;
+const dolphins3 = 89;
+
+const koalas1 = 97;
+const koalas2 = 112;
+const koalas3 = 89;
+
+const dolphinsAverage = (dolphins1 + dolphins2 + dolphins3) / 3;
+const koalasAverage = (koalas1 + koalas2 + koalas3) / 3;
+
+console.log(dolphinsAverage, koalasAverage);
+
+if (dolphinsAverage && koalasAverage < 100) {
+  console.log("Both Scores are too low!");
+} else if (dolphinsAverage === koalasAverage) {
+  console.log("It's a Draw");
+} else if (dolphinsAverage >= 100 && dolphinsAverage > koalasAverage) {
+  console.log("Dolphins Win!");
+} else if (dolphinsAverage >= 100 && dolphinsAverage < koalasAverage) {
+  console.log("Koalas Win!");
+}
