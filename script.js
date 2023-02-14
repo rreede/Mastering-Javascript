@@ -241,6 +241,8 @@ if (dolphinsAverage && koalasAverage < 100) {
 
 */
 
+/*
+
 const day = "friday";
 
 switch (day) {
@@ -271,3 +273,50 @@ if (day === "monday") {
 } else {
   console.log("Not a valid day!");
 }
+
+*/
+
+// console.log(`I'm ${2023 - 1996} years old!`);
+
+// Ternany operator
+
+const age = 23;
+
+/*
+age >= 18
+  ? console.log("I Like to drink wine 🍷")
+  : console.log("I Like to drink water 🌊");
+*/
+
+/*
+
+const drink = age >= 18 ? "wine 🍷" : "water 🌊";
+
+let drink2;
+
+if (age >= 18) {
+  drink2 = "Wine";
+} else {
+  drink2 = "Water";
+}
+
+console.log(drink2);
+
+console.log(`I like to drink ${age >= 18 ? "wine 🍷" : "water 🌊"}`);
+*/
+
+// Tip calculator
+
+const billValue = 301;
+let tipPercentage;
+
+const tip =
+  billValue >= 50 && billValue <= 300
+    ? (tipPercentage = 15)
+    : (tipPercentage = 20);
+
+console.log(
+  `The Bill was ${billValue}, the tip was ${
+    (billValue / 100) * tipPercentage
+  } total = ${billValue + tip}`
+);

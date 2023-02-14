@@ -1,5 +1,3 @@
-/*
-
 const country = "Estonia";
 const continent = "Europe";
 let population = 1.2;
@@ -52,6 +50,8 @@ if (population > 33) {
   );
 }
 
+/*
+
 const numNeighbours = Number(
   prompt("How many neighbour countries does your country have?")
 );
@@ -64,7 +64,7 @@ if (numNeighbours === 1) {
   console.log("No borders");
 }
 
-/*
+
 
 
 
@@ -104,7 +104,7 @@ if (country === "english" && population < 50 && !isIsland === false) {
   console.log("You should not live in Estonia!");
 }
 */
-
+/*
 switch (language) {
   case "chinese":
   case "mandarin":
@@ -125,3 +125,10 @@ switch (language) {
   default:
     console.log("Great language too!");
 }
+
+*/
+
+const countryPopulationGreater =
+  population > 33
+    ? console.log(`${country} population is above average`)
+    : console.log(`${country} population is below average`);
