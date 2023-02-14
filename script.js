@@ -214,6 +214,8 @@ if (favouriteNumber !== 23) {
 
 */
 
+/*
+
 const dolphins1 = 97;
 const dolphins2 = 112;
 const dolphins3 = 89;
@@ -235,4 +237,37 @@ if (dolphinsAverage && koalasAverage < 100) {
   console.log("Dolphins Win!");
 } else if (dolphinsAverage >= 100 && dolphinsAverage < koalasAverage) {
   console.log("Koalas Win!");
+}
+
+*/
+
+const day = "friday";
+
+switch (day) {
+  case "monday": // day === "monday"
+    console.log("Plan course structure");
+    console.log("Go to coding meetup!");
+    break;
+  case "tuesday":
+    console.log("Prepare theory videos");
+    console.log("Write code examples");
+    break;
+  case "friday":
+    console.log("I love fridays!");
+    break;
+  default:
+    console.log("Not a valid day!");
+}
+
+if (day === "monday") {
+  console.log("Plan course structure");
+  console.log("Go to coding meetup!");
+} else if (day === "tuesday" || "wednesday") {
+  console.log("Prepare theory videos");
+  console.log("Write code examples");
+} else if (day === "friday") {
+  console.log("I love fridays!");
+  console.log("Write code examples");
+} else {
+  console.log("Not a valid day!");
 }
