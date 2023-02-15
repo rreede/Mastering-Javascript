@@ -1,5 +1,6 @@
 "use strict";
 
+/*
 // Functions
 
 function logger() {
@@ -68,3 +69,39 @@ const percentageOfWorld2 = function (population) {
 };
 
 console.log(percentageOfWorld2(2000));
+
+
+
+const calcAge2 = function () {
+  return 2037 - birthYear;
+};
+*/
+// Arrow Function
+
+const calcAge3 = (birthYear) => 2037 - birthYear;
+
+const age3 = calcAge3(1991);
+console.log(age3);
+
+const yearsUntilRetirement = (birthYear, firstName) => {
+  const age = 2037 - birthYear;
+  const retirement = 65 - age;
+  // return retirement;
+  return `${firstName} retires in ${retirement} years.`;
+};
+
+console.log(yearsUntilRetirement(1991, "Rene"));
+
+console.log(yearsUntilRetirement(1999, "Madis"));
+
+const percentageOfWorld2 = function (population) {
+  const comparison = (population / worldPopulation) * 100;
+  return comparison;
+};
+
+const worldPopulation = 7900;
+
+const percentageOfWorld3 = (population) => (population / worldPopulation) * 100;
+
+const portugalPercentage = percentageOfWorld3(4000);
+console.log(percentage3);
