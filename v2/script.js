@@ -75,7 +75,7 @@ console.log(percentageOfWorld2(2000));
 const calcAge2 = function () {
   return 2037 - birthYear;
 };
-*/
+
 // Arrow Function
 
 const calcAge3 = (birthYear) => 2037 - birthYear;
@@ -105,3 +105,44 @@ const percentageOfWorld3 = (population) => (population / worldPopulation) * 100;
 
 const portugalPercentage = percentageOfWorld3(4000);
 console.log(percentage3);
+
+
+
+// Function inside a function
+
+function cutFruitPieces(fruit) {
+  return fruit * 4;
+}
+
+function fruitProcessor(apples, oranges) {
+  const applePieces = cutFruitPieces(apples);
+  const orangePieces = cutFruitPieces(oranges);
+
+  const juice = `Juice with ${applePieces} apples and ${orangePieces} pieces of  orange.`;
+  return juice;
+}
+
+
+
+// Population percentage calculator
+
+const worldPopulation = 7990;
+const country = "China";
+
+function percentageOfWorld1(population) {
+  const comparison = (population / worldPopulation) * 100;
+  return comparison;
+}
+
+const describePopulation = function (country, population) {
+  const percentageCalc = percentageOfWorld1(population);
+
+  const percentage = `${country} has ${population} million people, which is about ${percentageCalc}% of the world`;
+  console.log(percentage);
+};
+
+const describe = describePopulation("Portugal", 5000);
+
+console.log(describe);
+
+*/
