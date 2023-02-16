@@ -170,7 +170,7 @@ console.log(yearsUntilRetirement(1991, "Rene"));
 
 console.log(yearsUntilRetirement(1956, "Mike"));
 
-*/
+
 
 // Team vs Team (Atleast double the amount of points wins)
 
@@ -190,3 +190,69 @@ const checkWinner = function (dolphinsAverage, koalasAverage) {
 };
 
 checkWinner(dolphinsAverage, koalasAverage);
+
+*/
+
+// Arrays
+
+const friend1 = "Michael";
+const friend2 = "Steven";
+const friend3 = "Peter";
+
+const friends = ["Michael", "Steven", "Peter"];
+console.log(friends);
+
+const year = new Array(1191, 1924, 2009, 2023);
+
+console.log(friends[0]);
+
+console.log(friends.length);
+console.log(friends[friends.length - 1]);
+
+friends[2] = "Jay";
+
+console.log(friends);
+
+const firstName = "Rene";
+const rene = [firstName, "Reede", 2037 - 1991, friends];
+
+console.log(rene);
+
+// Exercise
+
+const calcAge = function (birthYear) {
+  return 2037 - birthYear;
+};
+
+const years = [1990, 1952, 2010];
+
+const age1 = calcAge(years[0]);
+const age2 = calcAge(years[1]);
+const age3 = calcAge(years[years.length - 1]);
+
+console.log(age1, age2, age3);
+
+const ages = [calcAge(years[0]), calcAge(years[years.length - 1])];
+
+console.log(ages);
+
+// Exercise
+
+const population = ["10", "5223", "534", "124"];
+
+console.log(population.length === 4);
+
+const worldPopulation = 7990;
+
+function percentageOfWorld1(population) {
+  return (population / worldPopulation) * 100;
+}
+
+const percentages = [
+  percentageOfWorld1(population[0]),
+  percentageOfWorld1(population[1]),
+  percentageOfWorld1(population[2]),
+  percentageOfWorld1(population[3]),
+];
+
+console.log(percentages);
