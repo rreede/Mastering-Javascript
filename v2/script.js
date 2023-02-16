@@ -145,4 +145,48 @@ const describe = describePopulation("Portugal", 5000);
 
 console.log(describe);
 
+
+
+const calcAge = function (birthYear) {
+  return 2037 - birthYear;
+};
+
+const yearsUntilRetirement = function (birthYear, firstName) {
+  const age = calcAge(birthYear);
+  const retirement = 65 - age;
+
+  if (retirement > 0) {
+    console.log(`${firstName} retires in ${retirement} years.`);
+    return retirement;
+  } else {
+    console.log(`${firstName} has already retired`);
+    return -1;
+  }
+
+  // return `
+};
+
+console.log(yearsUntilRetirement(1991, "Rene"));
+
+console.log(yearsUntilRetirement(1956, "Mike"));
+
 */
+
+// Team vs Team (Atleast double the amount of points wins)
+
+const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
+
+const dolphinsAverage = calcAverage(44, 23, 71);
+const koalasAverage = calcAverage(65, 54, 49);
+
+const checkWinner = function (dolphinsAverage, koalasAverage) {
+  if (dolphinsAverage >= 2 * koalasAverage) {
+    console.log(`Dolphins Win! ${dolphinsAverage} vs ${koalasAverage}`);
+  } else if (koalasAverage >= 2 * dolphinsAverage) {
+    console.log(`Koalas Win! ${koalasAverage} vs ${dolphinsAverage}`);
+  } else {
+    console.log("No one wins!");
+  }
+};
+
+checkWinner(dolphinsAverage, koalasAverage);
