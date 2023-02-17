@@ -315,10 +315,10 @@ neighbours[neighbours.indexOf("Latvia")] = "Africa";
 
 console.log(neighbours);
 
-*/
+
 
 // Coding challenge
-
+*/
 let tip;
 
 const calcTip = function (billValue) {
@@ -336,3 +336,29 @@ const total = [
 ];
 
 console.log(bills, tips);
+
+// Objects (Key/value pairs) / Properties
+
+const myCountry = {
+  country: "Estonia",
+  capital: "Tallinn",
+  language: "Estonian",
+  population: 1.2,
+  neighbours: "Latvia",
+};
+
+const rene = {
+  firstName: "Rene",
+  lastName: "Reede",
+  age: 2023 - 1996,
+  job: "Programmer",
+};
+
+console.log(rene);
+
+console.log(rene.lastName);
+console.log(rene["lastName"]);
+
+const nameKey = "Name";
+console.log(rene["first" + nameKey]);
+console.log(rene["last" + nameKey]);
