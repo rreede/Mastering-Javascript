@@ -339,19 +339,12 @@ console.log(bills, tips);
 
 // Objects (Key/value pairs) / Properties
 
-const myCountry = {
-  country: "Estonia",
-  capital: "Tallinn",
-  language: "Estonian",
-  population: 1.2,
-  neighbours: "Latvia",
-};
-
 const rene = {
   firstName: "Rene",
   lastName: "Reede",
   age: 2023 - 1996,
   job: "Programmer",
+  friends: ["Raigo", "Eero", "Markus"],
 };
 
 console.log(rene);
@@ -362,3 +355,39 @@ console.log(rene["lastName"]);
 const nameKey = "Name";
 console.log(rene["first" + nameKey]);
 console.log(rene["last" + nameKey]);
+
+const interestedIn = prompt(
+  "What do you want to know about Rene, Choose between firstName, lastName,age,job and friends"
+);
+
+console.log(rene[interestedIn]);
+
+if (rene[interestedIn]) {
+  console.log(rene[interestedIn]);
+} else {
+  console.log("Wrong request! ❌");
+}
+
+rene.location = "Estonia";
+rene["twitter"] = "€rener";
+
+console.log(rene);
+
+// Challenge
+// Rene has 3 friends and his best friend is called Raigo
+
+const bestFriend = ` ${rene.firstName} has ${rene.friends.length} friends, and his best friend is called ${rene.friends[0]}`;
+
+console.log(bestFriend);
+
+const myCountry = {
+  country: "Estonia",
+  capital: "Tallinn",
+  language: "Estonian",
+  population: 1.2,
+  neighbours: "Latvia",
+};
+
+const countryString = `${myCountry.country} has ${myCountry.population} million ${myCountry.language} speaking people, ${myCountry.neighbours.length} neighbouring countires and a capital called ${myCountry.capital} `;
+
+console.log(countryString);
