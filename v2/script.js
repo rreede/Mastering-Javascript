@@ -297,7 +297,7 @@ console.log(friends.includes("23"));
 if (friends.includes("Peter")) {
   console.log("You have a friend called Peter");
 }
-*/
+
 
 const neighbours = ["Finland", "Latvia", "Russia"];
 
@@ -314,3 +314,25 @@ if (!neighbours.includes("Germany")) {
 neighbours[neighbours.indexOf("Latvia")] = "Africa";
 
 console.log(neighbours);
+
+*/
+
+// Coding challenge
+
+let tip;
+
+const calcTip = function (billValue) {
+  return billValue >= 50 && billValue <= 300
+    ? billValue * 0.15
+    : billValue * 0.2;
+};
+
+const bills = [125, 555, 44];
+
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+
+const total = [
+  tips[0] + bills[0] + (tips[1] + bills[1]) + (tips[2] + bills[2]),
+];
+
+console.log(bills, tips);
