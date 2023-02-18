@@ -461,6 +461,8 @@ console.log(myCountry.describe());
 
 // BMI calculator with Objects
 
+/*
+
 const mark = {
   fullName: "Mark Miller",
   height: 1.69,
@@ -488,3 +490,169 @@ if (mark.BMI > john.BMI) {
     `John's BMI ${john.calcBMI()} is higher than  Mark's BMI ${mark.calcBMI()}`
   );
 }
+
+*/
+
+// Loop
+/*
+console.log("Lifting Weights repetition 1 🏋️");
+console.log("Lifting Weights repetition 2 🏋️");
+console.log("Lifting Weights repetition 3 🏋️");
+console.log("Lifting Weights repetition 4 🏋️");
+console.log("Lifting Weights repetition 5 🏋️");
+console.log("Lifting Weights repetition 6 🏋️");
+console.log("Lifting Weights repetition 7 🏋️");
+console.log("Lifting Weights repetition 8 🏋️");
+console.log("Lifting Weights repetition 9 🏋️");
+console.log("Lifting Weights repetition 10 🏋️");
+
+
+// For loop keeps running while condition is TRUE
+
+for (let rep = 1; rep <= 10; rep++) {
+  console.log(`Lifting Weights repetition rep ${rep} 🏋️`);
+}
+
+for (let vote = 1; vote <= 50; vote++) {
+  console.log(`Voter number ${vote} is currently voting`);
+}
+
+
+const reneArray = [
+  "Rene",
+  "Reede",
+  1996,
+  "programmer",
+  ["Raigo", "Eero", "Markus"],
+];
+
+const types = [];
+
+for (let i = 0; i < reneArray.length; i++) {
+  // Reading from reneArray
+  console.log(reneArray[i], typeof reneArray[i]);
+
+  // Filling types array
+  //types[i] = typeof reneArray[i];
+
+  types.push(typeof reneArray[i]);
+}
+
+console.log(types);
+
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+  ages.push(2023 - years[i]);
+}
+
+console.log(ages);
+
+// continue and break
+console.log("--- ONLY STRINGS ---");
+for (let i = 0; i < reneArray.length; i++) {
+  // Reading from reneArray
+
+  if (typeof reneArray[i] !== "string") continue;
+
+  console.log(reneArray[i], typeof reneArray[i]);
+}
+
+for (let i = 0; i < reneArray.length; i++) {
+  // Reading from reneArray
+
+  if (typeof reneArray[i] == "number") break;
+
+  console.log(reneArray[i], typeof reneArray[i]);
+}
+
+// Looping Arrays backwards
+
+
+const rene = ["Rene", "Reede", 1996, "programmer", ["Raigo", "Eero", "Markus"]];
+
+for (let i = rene.length - 1; i >= 0; i--) {
+  console.log(i, rene[i]);
+}
+
+// Loop inside a loop
+
+for (let exercise = 1; exercise < 4; exercise++) {
+  console.log(`--- Starting exercise ${exercise} ---`);
+
+  for (let rep = 1; rep < 6; rep++) {
+    console.log(`Lifting weight repetition ${rep}`);
+  }
+}
+
+const listOfNeighbours = [
+  ["Canada", "Mexico"],
+  ["Spain"],
+  ["Norway", "Sweden", "Russia"],
+];
+for (let i = 0; i < listOfNeighbours.length; i++)
+  for (let y = 0; y < listOfNeighbours[i].length; y++)
+    console.log(`Neighbour: ${listOfNeighbours[i][y]}`);
+
+
+for (let rep = 1; rep <= 10; rep++) {
+  console.log(`Lifting Weights repetition rep ${rep} 🏋️`);
+}
+
+
+
+let rep = 1;
+
+while (rep <= 10) {
+  console.log(`WHILE: Lifting Weights repetition rep ${rep} 🏋️`);
+  rep++;
+}
+
+
+// While loop dice generator
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+console.log(dice);
+
+while (dice !== 6) {
+  console.log(`You rolled a ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+  if (dice === 6) console.log("Loop is about to end");
+}
+
+
+
+// Challenge
+
+const calcTip = function (billValue) {
+  return billValue >= 50 && billValue <= 300
+    ? billValue * 0.15
+    : billValue * 0.2;
+};
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+let tips = [];
+let totals = [];
+
+for (let i = 0; i < bills.length; i++) {
+  const tip = calcTip(bills[i]);
+  tips.push(tip);
+  totals.push = bills[i] + tip;
+}
+
+const arr = [];
+
+const calcAverage = function (arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; ) {
+    sum = sum + arr[i];
+  }
+  console.log(sum);
+  return sum/arr.length;
+};
+
+console.log(calcAverage(2, 3, 6));
+
+console.log(bills, tips, totals);
+*/
