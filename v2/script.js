@@ -656,3 +656,65 @@ console.log(calcAverage(2, 3, 6));
 
 console.log(bills, tips, totals);
 */
+
+/*
+const temperatures1 = [3, -2, -6, -1, "error", 9, 13, 17, 15, 14, 9, 5];
+const temperatures2 = [53, -2, 23, -1, "error", 9, 13, 17, 15, 14, 9, 5];
+const temperature3 = temperatures1.concat(temperatures2);
+
+// What is temperature amplitude?
+//Answer: Difference between highest and lowest temp
+// How to compute max and min temperature
+
+const calcTempAmplitude = function (temps) {
+  let max = temps[0];
+  let min = temps[0];
+  for (let i = 0; i < temps.length; i++) {
+    const curTemp = temps[i];
+    if (typeof curTemp !== "number") continue;
+    if (curTemp > max) max = curTemp;
+    if (curTemp < min) min = curTemp;
+  }
+  console.log(max, min);
+  return max - min;
+};
+
+const amplitude = calcTempAmplitude(temperatures);
+console.log(amplitude);
+
+
+
+
+const measureKelvin = function () {
+  const measurement = {
+    type: "temp",
+    unit: "Celsius",
+    value: Number(prompt("Degrees celcius:")),
+  };
+
+  console.log(measurement.value);
+  const kelvin = measurement.value + 273;
+  console.table(measurement);
+
+  return kelvin;
+};
+
+console.log(measureKelvin());
+
+
+const data1 = [17, 21, 23];
+const data2 = [12, 5, -5, 0, 4];
+
+const printForecast = function (arr) {
+  for (let i = 0; i < arr.length; i++) {
+    const forecast = `... ${arr[i]}C in ${[i] + 1} days, ... ${
+      arr[i] + 1
+    }C in ${i} days ... ${arr[i]}C in ${i + 1} days`;
+    console.log(forecast);
+    return forecast;
+  }
+};
+
+console.log(printForecast(data1));
+
+*/
