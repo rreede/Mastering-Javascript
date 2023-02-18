@@ -318,7 +318,7 @@ console.log(neighbours);
 
 
 // Coding challenge
-*/
+
 let tip;
 
 const calcTip = function (billValue) {
@@ -391,3 +391,100 @@ const myCountry = {
 const countryString = `${myCountry.country} has ${myCountry.population} million ${myCountry.language} speaking people, ${myCountry.neighbours.length} neighbouring countires and a capital called ${myCountry.capital} `;
 
 console.log(countryString);
+
+const rene = {
+  firstName: "Rene",
+  lastName: "Reede",
+  age: 1996,
+  job: "Programmer",
+  friends: ["Raigo", "Eero", "Markus"],
+  hasDriverLicense: true,
+
+  //calcAge: function (birthYear) {
+  //  return 2037 - birthYear;
+  //},
+
+  // calcAge: function () {
+  //   return 2037 - this.age;
+  // },
+
+  calcAge: function () {
+    this.age = 2037 - this.age;
+    return this.age;
+  },
+
+  getSummary: function () {
+    return `${this.firstName}is a ${this.calcAge()}-year old ${
+      this.job
+    }, and  ${
+      this.hasDriverLicense
+        ? "he has a drivers license"
+        : "he doesn't have a drivers license"
+    } `;
+  },
+};
+
+console.log(rene.age);
+console.log(rene.age);
+console.log(rene.age);
+
+console.log(rene.getSummary());
+
+//console.log(rene["calcAge"](1991));
+
+const myCountry = {
+  country: "Estonia",
+  capital: "Tallinn",
+  language: "Estonian",
+  population: 1.2,
+  neighbours: "Latvia",
+  isIsland: false,
+  checkIsIsland: function () {
+    this.isIsland =
+      this.neighbours.length === 0 ? "is an island" : "Is not an island";
+  },
+
+  describe: function () {
+    return `${this.country} has ${this.population} million ${
+      this.language
+    } speaking people, it ${this.checkIsIsland()}`;
+  },
+};
+
+const countryString = `${myCountry.country} has ${myCountry.population} million ${myCountry.language} speaking people, ${myCountry.neighbours.length} neighbouring countires and a capital called ${myCountry.capital} `;
+
+console.log(countryString);
+
+console.log(myCountry.describe());
+
+  */
+
+// BMI calculator with Objects
+
+const mark = {
+  fullName: "Mark Miller",
+  height: 1.69,
+  mass: 78,
+  calcBMI: function () {
+    return (this.BMI = this.mass / this.height ** 2);
+  },
+};
+
+const john = {
+  fullName: "John Smith",
+  height: 1.95,
+  mass: 92,
+  calcBMI: function () {
+    return (this.BMI = this.mass / this.height ** 2);
+  },
+};
+
+if (mark.BMI > john.BMI) {
+  console.log(
+    `Mark's BMI ${mark.calcBMI()} is higher than John's BMI ${john.calcBMI()} `
+  );
+} else {
+  console.log(
+    `John's BMI ${john.calcBMI()} is higher than  Mark's BMI ${mark.calcBMI()}`
+  );
+}
