@@ -23,9 +23,19 @@ for (let i = 0; i < btnsOpenModal.length; i++)
     overlay.addEventListener('click', closeModal);
 
     document.addEventListener('keydown', function (e) {
-      console.log(e.key);
+      console.log(e);
       if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
         closeModal();
       }
+    });
+
+    // Trying to explain events
+    function meieAddeventListener(eventType, callback) {
+      const event = new Event(eventType);
+      callback(event);
+    }
+
+    meieAddeventListener('keydown', function (e) {
+      console.log('meie', e);
     });
   });
