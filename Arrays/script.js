@@ -55,3 +55,28 @@ console.log(starter, mainCourse);
 const nested = [2, 4, [5, 6]];
 
 const [i, , [j, k]] = nested;
+
+const products = {
+  phone: ['IPhone', 'Samsung', 'Xiaomi', 'Huawei'],
+  version: [12, 'Note 10', 'Note 10 pro', 'Mate 10 pro'],
+};
+
+const [iphone, samsung, xiaomi, huawei] = products.version;
+
+console.log(huawei);
+
+// Object descontruction
+
+const { name, openingHours, categories } = restaurant;
+console.log(name, openingHours, categories);
+
+const {
+  name: restaurantName,
+  openingHours: hours,
+  categories: tags,
+} = restaurant;
+
+const {
+  menu: [],
+  starterMenu: starters = [],
+} = restaurant;
