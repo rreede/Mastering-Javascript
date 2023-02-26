@@ -24,6 +24,12 @@ const restaurant = {
     );
   },
 
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(
+      `Here is you delicious pasta with ingredient 1: ${ing1}, ingredient 2: ${ing2}, ingredient: 3 ${ing3}`
+    );
+  },
+
   openingHours: {
     thu: {
       open: 12,
@@ -129,3 +135,47 @@ const {
   fri: { open: openFriday, close: closeFriday },
 } = openingHours;
 console.log(openFriday, closeFriday);
+
+const arr = [7, 8, 9];
+
+const newArr = [1, 2, ...arr];
+
+console.log(...newArr);
+console.log();
+
+const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+
+// Copy Array
+
+const mainMenuCopy = [...restaurant.mainMenu];
+
+// Join 2 arrays
+
+const menu2 = [...restaurant.starterMenu, ...restaurant.mainMenu];
+
+// Iterables: arrays, strings, maps, sets but NOT OBJECTS
+
+const str = 'Rene';
+const letters = [...str, 'S.'];
+console.log(letters);
+
+restaurant.orderPasta(2, 3, 5);
+
+const ingredients = [
+  /*
+  prompt("Let's make some pasta! Ingredient 1: "),
+  prompt("Let's make some pasta! Ingredient 2: "),
+  prompt("Let's make some pasta! Ingredient 3: "),
+  */
+];
+
+restaurant.orderPasta(...ingredients);
+
+// Objects
+
+const newRestaurant = { foundedIn: 1998, ...restaurant, founder: 'Guieseppe' };
+
+console.log(newRestaurant);
+restaurantCopy.name = 'Ristorante Roma';
+console.log(newRestaurant);
+console.log(restaurant.name);
