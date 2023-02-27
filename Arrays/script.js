@@ -49,6 +49,31 @@ const restaurant = {
   },
 };
 
+const rest1 = {
+  name: 'Capri',
+  numGuests: 20,
+};
+
+const rest2 = {
+  name: 'Capri',
+  owner: 'Giovanni Rose',
+};
+
+rest2.numGuests = rest2 || 10;
+
+console.log(rest1);
+console.log(rest2);
+
+rest1.numGuests []= 10;
+
+// Nullish assignment operator
+rest1.numGuests ??= 10;
+
+rest2.owner = rest2.owner && "Anonymous";
+
+rest2.owner &&= "Anonymous";
+
+/*
 // Destructuring in objects
 
 restaurant.orderDelivery({
@@ -223,3 +248,20 @@ const x = [4, 5, 2];
 add(...x);
 
 restaurant.orderPizza('Mushrooms', 'Onion', 'Olives', 'Spinach');
+
+// Short circuiting
+
+console.log(3 || 'Rene');
+console.log('' || 'Rene');
+console.log(true || 0);
+
+restaurant.numGuests = 23;
+
+const guests = restaurant.numGuests ? restaurant.numGuests : 10;
+
+console.log(guests);
+
+const guests2 = restaurant.numGuests || 10;
+
+console.log('--- AND ---');
+console.log('hello' && 23);
