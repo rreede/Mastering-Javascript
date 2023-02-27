@@ -29,6 +29,9 @@ const restaurant = {
       `Here is you delicious pasta with ingredient 1: ${ing1}, ingredient 2: ${ing2}, ingredient: 3 ${ing3}`
     );
   },
+  orderPizza: function (mainIngredients, ...otherIngredients) {
+    console.log(mainIngredients, otherIngredients);
+  },
 
   openingHours: {
     thu: {
@@ -179,3 +182,44 @@ console.log(newRestaurant);
 restaurantCopy.name = 'Ristorante Roma';
 console.log(newRestaurant);
 console.log(restaurant.name);
+
+// Spread, because on Right side of =
+
+// Destructuring
+
+// const arr1 = [1,2 ...cat]];
+
+// Rest, because on RIGHT side of =
+
+//const [a, b, ...others] = [1,2,3,4,5];
+
+console.log(a, b, others);
+
+// Rest element must be last element
+
+const [pizza, , risotto, ...otherFood] = [
+  ...restaurant,
+  mainMenu,
+  ...restaurant.starterMenu,
+];
+
+console.log(pizza, risotto, otherFood);
+
+const { sat, ...weekdays } = restaurant.openingHours;
+console.log(weekdays);
+
+// 2) Function
+
+const add = function (...numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) sum += numbers[i];
+  console.log(sum);
+};
+
+add(2, 3);
+add(4, 2, 3, 5, 2, 4);
+
+const x = [4, 5, 2];
+add(...x);
+
+restaurant.orderPizza('Mushrooms', 'Onion', 'Olives', 'Spinach');
