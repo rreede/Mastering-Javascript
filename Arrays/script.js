@@ -6,18 +6,18 @@ const flights =
 
 // Data needed for first part of the section
 
-const weekdays = ['mon', 'tue', 'wed', 'thu'];
+const weekdays = ['mon', 'tue', 'wed', 'thu', 'fry', 'sat', 'sun'];
 
 const openingHours = {
-  thu: {
+  [weekdays[3]]: {
     open: 12,
     close: 22,
   },
-  fri: {
+  [weekdays[4]]: {
     open: 11,
     close: 23,
   },
-  sat: {
+  [weekdays[5]]: {
     open: 0, // Open 24 hours
     close: 24,
   },
@@ -55,9 +55,33 @@ const restaurant = {
   },
 };
 
-if (restaurant.openingHours.mon) {
+if (restaurant.openingHours.mon && restaurant.openingHours.mon) {
   console.log(restaurant.openingHours.mon.open);
 }
+
+// With optional chaining
+
+console.log(restaurant.openingHours.mon?.open);
+
+// Example
+
+const days = ['mon', 'tue', 'wed', 'thu', 'fry', 'sat', 'sun'];
+
+for (const day of days) {
+  console.log(day);
+  const open = restaurant.openingHours[day]?.open ?? 'closed';
+  console.log(`On ${day} we are open at ${open} `);
+}
+
+// Methods
+
+console.log(restaurant.order?.(0, 1) ?? 'method does not exist');
+
+// Arrays
+
+const users = [{ name: 'Jonas', email: 'rene@gmail.com' }];
+
+console.log(users[0]?.name ?? 'User array empty');
 
 /*
 const rest1 = {
