@@ -55,6 +55,37 @@ const restaurant = {
   },
 };
 
+// Property NAMES
+
+const properties = Object.keys(openingHours);
+
+console.log(properties);
+
+let openStr = `We are open on ${properties.length} days`;
+
+for (const day of properties) {
+  openStr += `${day},`;
+}
+
+console.log(openStr);
+
+// Property VALUES
+
+const values = Object.values(openingHours);
+
+console.log(values);
+
+// Entire OBJECT
+
+const valuesAndProperties = Object.entries(openingHours);
+
+console.log(valuesAndProperties);
+
+for (const [key, { open, close }] of valuesAndProperties) {
+  console.log(`On ${key} we open at ${open} and close at ${close}`);
+}
+
+/*
 if (restaurant.openingHours.mon && restaurant.openingHours.mon) {
   console.log(restaurant.openingHours.mon.open);
 }
@@ -84,7 +115,7 @@ const users = [{ name: 'Jonas', email: 'rene@gmail.com' }];
 console.log(users[0]?.name ?? 'User array empty');
 
 /*
-const rest1 = {
+7const rest1 = {
   name: 'Capri',
   numGuests: 20,
 };
@@ -304,7 +335,7 @@ const guests2 = restaurant.numGuests || 10;
 
 console.log('--- AND ---');
 console.log('hello' && 23);
-*/
+
 
 // For of loop
 
@@ -313,9 +344,10 @@ const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 for (const item of menu) {
   console.log(item);
 }
-*/
+
 for (const [i, el] of menu.entries()) {
   console.log(`${i + 1}: ${el}`);
 }
 
 // Object literals
+*/
