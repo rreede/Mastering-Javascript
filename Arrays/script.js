@@ -1,9 +1,20 @@
 'use strict';
 
-// Data needed for a later exercise
 const flights =
   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
 
+for (const part of flights.split('+')) {
+  const [type, from, to, time] = part.split(';');
+  const output = `${type.startsWith('_Delayed') ? '❌' : ''} ${type
+    .replaceAll('_', ' ')
+    .trim()} From ${from.slice(0, 3).toUpperCase()} ${to
+    .slice(0, 3)
+    .toUpperCase()} To (${time.replace(':', 'h')})`;
+
+  console.log(output);
+}
+
+/*
 // Data needed for first part of the section
 
 const weekdays = ['mon', 'tue', 'wed', 'thu', 'fry', 'sat', 'sun'];
@@ -54,6 +65,177 @@ const restaurant = {
     console.log(mainIngredients, otherIngredients);
   },
 };
+
+// Working with strings
+
+// Split and Join
+
+console.log('a+very+nice+string'.split('+'));
+console.log('Rene Reede'.split(' '));
+
+const [firstName, lastName] = 'Rene Reede'.split(' ');
+
+console.log(firstName);
+
+const newName = ['Mr.', firstName, lastName.toUpperCase()].join(' ');
+console.log(newName);
+/*
+const capitalizer = function (passenger) {
+  const names = passenger.split(' ');
+  const namesUpper = [];
+  for (const n of passenger) {
+    namesUpper.push.n[0].toUpperCase() + n.slice[1];
+  }
+
+  console.log(namesUpper.join(' '));
+};
+
+const passenger = 'jess ann smith davis';
+
+capitalizer(passenger);
+*/
+/*
+const message = 'Go to gate 23';
+console.log(message.padStart(25, '+'));
+
+console.log('lololfladflsdf'.padStart(25, '---').padEnd(35, 'x'));
+
+const maskCreditCard = function (number) {
+  const str = number + '';
+  const last = str.slice(-4);
+  return last.padStart(str.length, '*');
+
+  console.log(last);
+};
+
+console.log(maskCreditCard(3434435343543453));
+
+// Repeat
+
+const message2 = 'Bad Weather... All Departures Delayed...';
+
+console.log(message2.repeat(5));
+
+const planesInLine = function (n) {
+  console.log(`There are ${n} planes in line ${'🛫'.repeat(n)}`);
+};
+
+console.log(planesInLine(5));
+
+/*
+const airline = 'TAP Air Portugal';
+const plane = 'A320';
+
+console.log(airline.toLowerCase());
+console.log(airline.toUpperCase());
+
+// Fix capitalization in name
+
+const passenger = 'joDiE';
+
+const passengerLower = passenger.toLowerCase();
+
+const passengerCorrect =
+  passengerLower[0].toUpperCase() + passengerLower.slice(1);
+
+console.log(passengerCorrect);
+
+// comparing emails
+
+const email = 'hello@rene.io';
+const loginEmail = '  Hello@rene.io ';
+
+const normalizedEmail = loginEmail.toLowerCase().trim();
+console.log(normalizedEmail);
+
+// Replacing strings
+
+const priceGB = '288,97$';
+
+const priceUS = priceGB.replace('$', '€').replace(',', '.');
+
+console.log(priceUS);
+
+const announcement =
+  'All passengers come to boaring door 23, boarding door 23!';
+
+console.log(announcement.replace('door', 'gate'));
+
+console.log(announcement.replace(/door/g, 'gate'));
+
+const plane2 = 'Airbus A32neo';
+
+console.log(plane2.includes('A32'));
+console.log(plane2.startsWith('Airb'));
+
+if (plane2.startsWith('Airbus') && plane.endsWith('neo')) {
+  console.log('Part of the new airbus family');
+}
+
+// Practise Exercise
+
+const checkBaggage = function (items) {
+  const baggage = items.toLowerCase();
+  if (baggage.includes('knife') || baggage.includes('gun')) {
+    console.log('You are not allowed on board!');
+  } else {
+    console.log('You are allowed!');
+  }
+};
+
+checkBaggage('I have a laptop, some Food and a pocket Knife');
+
+checkBaggage('Socks and camera');
+
+
+// Using SLICE
+
+const airline = 'TAP Air Portugal';
+const plane = 'A320';
+
+// Picking one letter by position
+
+console.log(plane[0]);
+console.log(plane[1]);
+
+// Picking one letter by position straight from string
+
+console.log('B737'[0]);
+
+// How many characters in string
+
+console.log(airline.length);
+console.log('B737'[0].length);
+
+// Find placement of string item
+
+console.log(airline.indexOf('r'));
+
+// Find last placement of string item
+
+console.log(airline.lastIndexOf('r'));
+
+// Find
+console.log(airline.indexOf('Portugal'));
+
+console.log(airline.slice(4));
+
+console.log(airline.slice(0, airline.indexOf(' ')));
+
+console.log(airline.slice(0, airline.lastIndexOf(' ') + 1));
+
+console.log(airline.slice(-2));
+
+const checkMiddleSeat = function (seat) {
+  // B and E are middle Seats
+  const s = seat.slice(-1);
+
+  if (s === 'B' || s === 'E') console.log('You got the Middle seat');
+};
+
+checkMiddleSeat('11B');
+checkMiddleSeat('23C');
+checkMiddleSeat('23C');
 
 const gameEvents = new Map([
   [17, '⚽ GOAL'],
