@@ -203,7 +203,7 @@ const addTaxRate = function(rate) {
 }
 
 const addVAT2 = addTaxRate(0.23);
-*/
+
 
 const poll = {
   question: "What is your favourite programming language?",
@@ -211,17 +211,112 @@ const poll = {
   answers: new Array(4).fill(0),
 
   registerNewAnswer(promptEnter) {
-
-    for(const arrayItem of this.options) {
-      
+    for (const arrayItem of this.options) {
       console.log(arrayItem);
     }
 
-
-
-    promptEnter = prompt(`${this.question} ${...this.options}`, " ");
+    promptEnter = prompt(
+      `${this.question}\n ${this.options.join("\n")} Write option here!`,
+      " "
+    );
     console.log(promptEnter);
+// type of comment
+
+
+    typeof answer === "number" &&
+      answer < this.answers.length &&
+      this.answers[answer]++;
   },
 };
 
 poll.registerNewAnswer();
+
+poll.registerNewAnswer();
+
+
+// Immediately invoced functions
+
+const Immediately = function () {
+  console.log("This will never run again");
+};
+
+// IIFE
+
+Immediately();
+
+(function () {
+  console.log("This will never urn again");
+  const isPrivate = 23;
+})();
+
+console.log(isPrivate);
+
+() => console.log("This will ALSO never run again");
+
+
+const secureBooking = function () {
+  let passengerCount = 0;
+
+  return function () {
+    passengerCount++;
+    console.log(`${passengerCount} passengers`);
+  };
+};
+
+const booker = secureBooking();
+
+booker();
+booker();
+booker();
+
+console.dir(booker);
+
+
+
+// Example one
+
+let f;
+
+const g = function () {
+  const a = 23;
+  f = function () {
+    console.log(a * 2);
+  };
+};
+
+const h = function () {
+  const b = 777;
+  f = function () {
+    console.log(b * 2);
+  };
+};
+
+g();
+
+f();
+
+// Re-assigning f function
+
+h();
+
+f();
+
+console.dir(f);
+*/
+
+// Example 2
+
+const boardPassengers = function (n, wait) {
+  const perGroup = n / 3;
+
+  setTimeout(function () {
+    console.log(`We are now boarding all ${n} passengers`);
+
+    console.log(`There are 3 groups, each with ${perGroup} passengers`);
+  }, wait * 1000);
+
+  console.log(`Will start boarding in ${wait} seconds`);
+};
+
+const perGroup = 1000;
+boardPassengers(180, 3);
